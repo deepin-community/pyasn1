@@ -1,0 +1,241 @@
+pyasn1 (0.4.8-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Bump debhelper from deprecated 9 to 12.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Fix day-of-week for changelog entry 0.0.4a-1.
+
+  [ Tristan Seligmann ]
+  * New upstream release.
+    - Drop 0001-sys.getsizeof-may-raise-TypeError.patch.
+  * Declare rootless build.
+  * Update Homepage.
+  * Bump Standards-Version to 4.5.0 (no changes).
+  * Bump debhelper-compat to 13.
+  * Apply sphinxdoc:Built-Using.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Fri, 17 Jul 2020 15:05:27 +0200
+
+pyasn1 (0.4.2-4) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+  * d/control: Remove ancient X-Python-Version field
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Sandro Tosi ]
+  * Drop python2 support; Closes: #937386
+
+ -- Sandro Tosi <morph@debian.org>  Sat, 04 Apr 2020 20:16:11 -0400
+
+pyasn1 (0.4.2-3) unstable; urgency=medium
+
+  * Add Replaces/Breaks for python-pyasn1-doc (closes: #886700).
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Tue, 09 Jan 2018 12:40:05 +0200
+
+pyasn1 (0.4.2-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Vincent Bernat <bernat@debian.org>  Sun, 31 Dec 2017 14:45:40 +0100
+
+pyasn1 (0.4.2-1) experimental; urgency=medium
+
+  [ Tristan Seligmann ]
+  * Switch debian/watch to pypi.debian.net; releases are no longer being
+    made on the SourceForge project (closes: #855896).
+
+  [ Vincent Bernat ]
+  * New upstream release. Closes: #872724.
+  * d/patches: fix test using sys.getsizeof().
+  * d/patches: fix privacy breaches.
+  * d/control: bump Standards-Version.
+  * d/control: add documentation package.
+  * d/control: add test suite.
+  * d/control: mention this version breaks python-pysnmp4.
+
+ -- Vincent Bernat <bernat@debian.org>  Tue, 26 Dec 2017 07:24:19 +0100
+
+pyasn1 (0.1.9-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+  [ Vincent Bernat ]
+  * Switch to pybuild for build. It's far easier to get proper pypy
+    support this way.  This happens to closes: #837025 (FTBFS).
+
+ -- Vincent Bernat <bernat@debian.org>  Sat, 10 Sep 2016 14:22:55 +0200
+
+pyasn1 (0.1.9-1) unstable; urgency=medium
+
+  * Add pydist files.
+  * New upstream release.
+  * Add myself to uploaders.
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Wed, 07 Oct 2015 11:23:29 +0200
+
+pyasn1 (0.1.8-2) unstable; urgency=medium
+
+  * Team upload.
+  * Add pypy-pyasn1 package.
+  * Remove deprecated DEB_COMPRESS_EXCLUDE.
+  * Bump debhelper compat level (no changes needed).
+
+ -- Tristan Seligmann <mithrandi@debian.org>  Fri, 04 Sep 2015 08:35:01 +0200
+
+pyasn1 (0.1.8-1) unstable; urgency=medium
+
+  * New upstream release
+  * Bump Standards-Version to 3.9.6.
+  * Run unittests with Python 3 too.
+
+ -- Vincent Bernat <bernat@debian.org>  Tue, 28 Jul 2015 08:02:59 +0200
+
+pyasn1 (0.1.7-1) unstable; urgency=low
+
+  [ Vincent Bernat ]
+  * New upstream release.
+  * Bump Standards-Version to 3.9.4.
+  * Examples are not provided any more. Ship more documentation instead.
+  * Add python3-pyasn1 package for Python 3 support.
+  * Update debian/copyright to reflect licensing change.
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Yaroslav Halchenko ]
+  * Team upload
+  * New upstream release (Closes: #691421)
+  * debian/rules:
+    - run tests (test/suite.py) upon build
+
+ -- Vincent Bernat <bernat@debian.org>  Tue, 24 Sep 2013 09:28:33 +0200
+
+pyasn1 (0.1.3-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Deepak Tripathi ]
+  * debian/watch
+    + updated source to sf.net redirector.
+
+  [Arnaud Fontaine]
+  * New upstream release. Closes: #651686.
+    + PyASN1 manual has been renamed, thus update doc-base.
+  * Fix FTBFS if built twice by adding debian/source/options to ignore
+    changes to .egg-info directory. Closes: #671249.
+  * Switch from python-support to dh_python2.
+  * debian/watch: fix regex to not match pyasn1-modules.
+  * debian/copyright: switch to machine-readable format.
+  * debian/control:
+    + Add doc-base to Suggests.
+    + Bump Standards-Version to 3.9.3. No changes needed.
+    + Build-Depends on python-all rather than only python.
+
+ -- Arnaud Fontaine <arnau@debian.org>  Mon, 21 May 2012 17:45:30 +0900
+
+pyasn1 (0.0.11a-1) unstable; urgency=low
+
+  * New upstream release (Closes: #579556).
+  * Bumped Standard version to 3.8.4 (No changes).
+  * debian/control:
+    + Added myself to Uploaders.
+    + Added ${misc:Depends}.
+    + Aemoved python-dev and added python.
+  * debian/copyright
+    + Added debian's copyright information.
+    + Formated and updated copy information.
+  * Added debian/python-pyasn1.doc-base.
+  * debian/source:
+    + Switch to dpkg-source 3.0 (quilt) format.
+
+  [Arnaud Fontaine]
+  * debian/control:
+     + Remove myself from Maintainer as Jan Lübbe is now the maintainer.
+
+ -- Deepak Tripathi <apenguinlinux@gmail.com>  Fri, 14 May 2010 16:30:27 -0400
+
+pyasn1 (0.0.8a-1) unstable; urgency=low
+
+  [ Arnaud Fontaine ]
+  * New upstream release.
+  * New email address.
+  * Remove useless debian/control.in.
+  * debian/control:
+    + Update Standards-Version to 3.7.3. No changes needed.
+
+  [ Piotr Ożarowski ]
+  * debian/control:
+    + Add Vcs-Browser and Homepage fields.
+    + Rename XS-Vcs-Svn field to Vcs-Svn.
+
+  [ Sandro Tosi ]
+  * debian/control:
+    - Uniformise Vcs-Browser field.
+  * debian/control
+    - switch Vcs-Browser field to viewsvn
+
+ -- Arnaud Fontaine <arnau@debian.org>  Thu, 29 May 2008 22:05:33 +0200
+
+pyasn1 (0.0.7a-1) unstable; urgency=low
+
+  * New upstream release
+  * Update my maintainer address
+
+ -- Jan Luebbe <jluebbe@debian.org>  Sun, 26 Aug 2007 13:26:31 +0200
+
+pyasn1 (0.0.6a-1) unstable; urgency=low
+
+  [ Arnaud Fontaine ]
+  * New upstream release.
+  * Add egg support.
+
+  [ Piotr Ozarowski ]
+  * Added XS-Vcs-Svn field
+
+ -- Arnaud Fontaine <arnaud@andesi.org>  Mon, 16 Apr 2007 17:56:28 +0200
+
+pyasn1 (0.0.5a-2) unstable; urgency=low
+
+  * New Python policy changes. Closes: #373484.
+    + debian/compat:
+      - Update debhelper compatibility to 5.
+    + debian/rules:
+      - Add DEB_PYTHON_SYSTEM=pysupport.
+    + debian/control.in
+      - Clean Build-Depends and Depends, cdbs handles that
+        automatically now.
+      - XB-Python-Version and Provides for binary package.
+    + debian/postinst && debian/prerm:
+      - Remove "hand made" python-support stuff, cdbs does this.
+
+ -- Arnaud Fontaine <arnaud@andesi.org>  Mon, 19 Jun 2006 23:51:44 +0200
+
+pyasn1 (0.0.5a-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bumped Standards-Version to 3.7.2.
+  * Add debian/source.lintian-overrides for Build-Depends warnings
+    concerning python-support
+  * Update python-support to 0.2.1 in debian/control* and
+    debian/rules.
+
+ -- Arnaud Fontaine <arnaud@andesi.org>  Thu,  1 Jun 2006 16:41:11 +0200
+
+pyasn1 (0.0.4a-2) unstable; urgency=low
+
+  * Move Build-Depends-Indep to Build-Depends according
+    to the debian policy.
+
+ -- Arnaud Fontaine <arnaud@andesi.org>  Sat, 22 Apr 2006 19:22:53 +0200
+
+pyasn1 (0.0.4a-1) unstable; urgency=low
+
+  * Initial release. Closes: #364204.
+
+ -- Arnaud Fontaine <arnaud@andesi.org>  Sat, 22 Apr 2006 08:22:12 +0200
