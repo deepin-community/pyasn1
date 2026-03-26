@@ -1,2 +1,4 @@
 0002-Remove-some-theme-options-to-avoid-needless-badges-i.patch
 CVE-2026-23490.patch
+0003-Fix-OverflowError-from-oversized-BER-length-field-10.patch
+0004-Merge-commit-from-fork.patch
