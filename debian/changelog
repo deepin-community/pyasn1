@@ -1,3 +1,10 @@
+pyasn1 (0.4.8-4deepin1.1) UNRELEASED; urgency=medium
+
+  * Non-maintainer upload.
+  * Fixed uncontrolled recursion in ASN.1 decoder (CVE-2026-30922)
+
+ -- hudeng <hudeng@deepin.org>  Wed, 29 Apr 2026 13:05:35 +0800
+
 pyasn1 (0.4.8-4deepin1) unstable; urgency=medium
 
   * Fixed continuation octet limits in OID/RELATIVE-OID decoder (CVE-
