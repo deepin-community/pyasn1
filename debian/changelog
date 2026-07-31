@@ -1,11 +1,10 @@
-pyasn1 (0.6.1-1+deb13u1deepin1) unstable; urgency=medium
+pyasn1 (0.6.1-1+deb13u2) trixie-security; urgency=high
 
-  * Apply patches from upstream:
-    - 0003-Fix-OverflowError-from-oversized-BER-length-field-10.patch
-    - 0004-Merge-commit-from-fork.patch
-    Fixes: CVE-2026-30922
+  * Non-maintainer upload by the Security Team.
+  * Denial of Service in pyasn1 via Unbounded Recursion (CVE-2026-30922)
+    (Closes: #1131371)
 
- -- Tianyu Chen <sweetyfish@deepin.org>  Thu, 26 Mar 2026 15:11:25 +0800
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 26 Mar 2026 17:21:15 +0100
 
 pyasn1 (0.6.1-1+deb13u1) trixie-security; urgency=high
 
